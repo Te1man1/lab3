@@ -12,56 +12,76 @@
       display: flex;
       flex-direction: column; 
     }
-    #main-aside-wrapper {
+    #main {
       display: flex;
       flex-direction: column; 
     }
-    #main-aside-wrapper main, #main-aside-wrapper aside {
+    #main main, #main aside {
       background-color: #ddd;
       margin: 10px;
       padding: 10px;
     }
-    #main-aside-wrapper main {
-      flex: 3;
-      order: -1;
-    }
-    #main-aside-wrapper aside {
-    flex: 0.5;
-    order: 1;
+    #main aside {
+    flex: 25%;
+    min-height: 100%; 
+    order: 2;
     } 
-    #vrot form{
-      flex: 3;
-      order: 2;
+    #main main {
+      flex: 100%;
+      order: 1;
+    }
+    #vrot form{   
+      flex: 50%;
+      order: 4;
     }
     #vrot table{
       flex: 3;
-      order: 3  ;
+      order: 5  ;
     }
-    @media screen and (min-width: 800px) {
-      #main-aside-wrapper {
+    @media screen and (min-width: 1200px) {
+      #main {
         flex-direction: row;
       }
-    }
-       </style>
+      #main main {
+      flex: 100%;
+      order: 2;
+      } 
+      #main aside {
+      flex: 15%;
+      order: 1;
+      }
+    } 
+</style>
 
 
+<body id="main">
+  <aside>   
+    <ul>
+        <li><a target="blank" href="https://www.audeze.com/" alt="" title="Главная страница">Главная</a></li>
+        <li><a target="blank" href="https://www.audeze.com/pages/dealers-west" alt="" title="Поставщики">Поставщики</a></li>
+        <li><a target="blank" href="https://www.audeze.com/blogs/publication-reviews" alt="" title="Обзоры Товара">Обзоры</a></li>
+    </ul>
+</aside> 
+<main>
 
-<body class="body" id="main-aside-wrapper">
-        <main>
-<head>
-      <div class="header" >
-        <img src="audeze.png" alt="audeze logo" class="logo" />
-        <div class="zagolovok">AUDEZE </div>
-      </div>
-      
-      <div class="nav">
-          <p>
-              <a href="nav1.html" alt="" >меню1_____ </a> 
-              <a href="nav2.html" alt="">ссылка1_____</a>
-              <a href="nav3.html" alt="">ссылка2</a>
-          </p>
-      </div>
-    </head>
+<div id="vrot">
+            <header>
+              <div class="header" >
+                <img src="audeze.png" alt="audeze logo" class="logo" />
+                <div class="zagolovok">AUDEZE </div>
+              </div>
+            </header>
+          
+           
+
+<div class="nav">
+        <p>
+            <a href="nav1.html" alt="" >меню </a> 
+            <a href="nav2.html" alt="">ссылка1</a>
+            <a href="nav3.html" alt="">ссылка2</a>
+        </p>
+    </div>
+    
       <hyper>
       <p> Задание 1</p> 
       <p> 1) абсолютную гиперссылку на главную страницу сайта example.com;</p>
@@ -75,7 +95,7 @@
       <p>5. ссылку на фрагмент страницы некоторого сайта:
       <a target="blank" href="https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F#:~:text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D0%B5%20%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%20%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%BE%D0%B2">Ссылка</a></p>
       <p>6. ссылку на фрагмент текущей страницы:
-      <a href="#top">Наверх</a></p>
+      <a href=" ">Наверх</a></p>
       <p>7. ссылку с двумя параметрами в url:
       <a target="blank" href="https://www.kubsu.ru/ru/university">Ссылка</a></p>
       <p>8. Список ссылок основной навигации сайта с подписями title:</p>
@@ -94,19 +114,18 @@
     <p>14. Ссылка-изображение: 
         <a target="blank" href="https://www.kubsu.ru"><img src="shrek_png.png" class="shrek"></a></p>
     <p>15. ссылки из прямоугольных и круглых областей картинки (HTML-тег map):  
-        <p><img src="shrek_png.png" width="100" height="100" usemap="#navigation"></p>
+        <p><img src="shrek_png.png" width="100" height="100" usemap=" "></p>
         <map name="navigation">
         <area shape="circle" coords="50, 50, 50" href="https://www.kubsu.ru" alt="">
         </map>
         
     <p>16. Относительная на страницу в текущем каталоге: <a target="blank" href="next.html">Ссылка</a></p>   
     <p>17. Относительная на страницу в каталоге about: <a target="blank" href="about/nextnext.html">Ссылка</a></p>
-    <p>18. Относительная на страницу в каталоге выше текущего: <a target="blank" href="../pred.html">Ссылка</a></p>
-    <p>19. Относительная на страницу в каталоге двумя уровнями выше: <a target="blank" href="../../predpred.html">Ссылка</a></p>
+    <p>18. Относительная на страницу в каталоге выше текущего: <a target="blank" href="www.example.com">Ссылка</a></p>
+    <p>19. Относительная на страницу в каталоге двумя уровнями выше: <a target="blank" href="example.com">Ссылка</a></p>
     </hyper>
 
 
-    <div id="vrot">
       <table cellspacing="10" rules="all" height="300px" class="table" class="tablestyle">
         <tr>
           <th>Наушники с ультра тонкой мембраной</th>
@@ -146,24 +165,13 @@
           <p> <input type="submit" value="Отправить"></p>
         </form>
       
-        <aside>   
-          <ul>
-              <li><a target="blank" href="https://www.audeze.com/" alt="" title="Главная страница">Главная</a></li>
-              <li><a target="blank" href="https://www.audeze.com/pages/dealers-west" alt="" title="Поставщики">Поставщики</a></li>
-              <li><a target="blank" href="https://www.audeze.com/blogs/publication-reviews" alt="" title="Обзоры Товара">Обзоры</a></li>
-          </ul>
-      </aside> 
-    </div>
-
-
-    <footer class="footer">
-      Copyright Каракашян Тельман
-    </footer>
-      
+    
+  </div>
+  <footer class="footer">
+    Copyright Каракашян Тельман
+  </footer>
   </main>
  
- 
+  
   </body>
-
-
-</html> 
+</html>
